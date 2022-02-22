@@ -1,0 +1,14 @@
+
+###Dev Doc
+
+
+#####Goals:
+- Replace Red Rectangles
+- Add More Types Of Enemys (Flying, homing, Tresures)
+- Make Player Able To attack
+- Gameover Overlay With HiScore, Continue Button(Ad) and button to return to shop
+- Main Menu
+- Basic Shop
+- Have A Unlock System That Cost Schmekels
+- Have A endless Upgrade System That Cost Schmekels
+- Cosmetics that Cost Schmekels?

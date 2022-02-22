@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - spawnTrigger
+  - Despawner
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 496425167
+    locked: 0
+  - name: Ground
+    uniqueID: 2869123361
+    locked: 0
+  - name: Objects
+    uniqueID: 1015812337
+    locked: 0
+  - name: Player
+    uniqueID: 1971284565
+    locked: 0
+  - name: UI
+    uniqueID: 3323531325
+    locked: 0
