@@ -16,23 +16,25 @@ public class ItemMovment : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Player player = collision.gameObject.GetComponent<Player>();
             switch (effectedStat)
             {
                 case EffectedStat.Schmekels:
                     ScoreManager.Schmekels++;
                     AudioManager.instance.Play("coin");
+                    collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
                     Destroy(gameObject);
                     break;
                 case EffectedStat.Hp:
-                    if (FindObjectOfType<Player>().Hp + 0.2f > 1)
-                        FindObjectOfType<Player>().Hp = 1;
+                    if (player.Hp + 0.2f > 1)
+                        player.Hp = 1;
                     else
-                        FindObjectOfType<Player>().Hp += 0.2f;
+                        player.Hp += 0.2f;
                     AudioManager.instance.Play("food");
                     Destroy(gameObject);
                     break;
                 case EffectedStat.Damage:
-                    FindObjectOfType<Player>().TakeDamage(0.2f);
+                    player.TakeDamage(0.2f);
                     StartCoroutine(AnimateHit());
                     break;
             }

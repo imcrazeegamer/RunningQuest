@@ -2,16 +2,15 @@
 ###Dev Doc
 
 ##### Do It Now:
-
 - Enemys That Move Up And Down
 - Enemys That Show Projectile Towrds Player And then do off Screen
 - Enemys That Spawn explotion on where player is in 2 seconds
-- Coin Pickup Partical Effects
+- Gradualy add more monsters the farther you get (every 100m)
 - Player Crouch?
 - Player Attack?
 - Player Shot Projectiles?
 
-#####Goals:
+##### Goals:
 - Add More Types Of Enemys (Flying, homing, Tresures)
 - Make Player Able To attack
 - Basic Shop
@@ -19,5 +18,3 @@
 - Have A endless Upgrade System That Cost Schmekels
 - Cosmetics that Cost Schmekels?
 - Main Menu
-
-added Gameover Screen, added Witches, Coins, Food, projectiles and sound;
