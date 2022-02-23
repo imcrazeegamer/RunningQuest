@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     private void FixedUpdate()
     {
         ScoreText.text = $"Schmekels: {Schmekels}";
-        DistanceText.text = $"Distance: {System.Math.Round(Distance, 2)}m";
+        DistanceText.text = $"Distance: {System.Math.Round(Distance, 1)}m";
         HiScoreText.text = $"HiScore: {System.Math.Round(__HiDistance, 2)}m";
     }
 
@@ -27,4 +27,5 @@ public class ScoreManager : MonoBehaviour
     {        
         SaveSystem.SaveGame(new SaveData(__HiDistance, Schmekels));
     }
+
 }

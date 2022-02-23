@@ -11,7 +11,7 @@ public class SpikeGenarator : MonoBehaviour
     [SerializeField] [Range(1, 100)] float speedLimit = 10f;
     public float currentSpeed;
     float timeBtwSpawn;
-    [SerializeField] float startTimeBtwSpawn = 2;
+    [SerializeField] float startTimeBtwSpawn = 2f;
     [SerializeField] float startTimeDelta = 0.001f;
     [SerializeField] float startTimeLimit = 0.1f;
    

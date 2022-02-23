@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +68,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -2577,11 +2577,11 @@ TextureImporter:
       ui_21: -1603340387
       ui_22: 372501702
       ui_65: -988448709
-      ui_3: 1788563554
-      ui_51: 1014643569
-      ui_85: 557634895
-      ui_71: 1477790395
       ui_86: 1284441464
+      ui_3: 1788563554
+      ui_85: 557634895
+      ui_51: 1014643569
+      ui_71: 1477790395
       ui_8: -304118497
       ui_64: 2083000770
       ui_81: -1303054026
