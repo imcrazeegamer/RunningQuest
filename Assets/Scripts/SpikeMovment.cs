@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpikeMovment : MonoBehaviour
 {
     public float damage = 0.5f;
-    public float currentSpeed;
+    public float currentSpeed = 1;
     Animator animator;
 
     void Update()

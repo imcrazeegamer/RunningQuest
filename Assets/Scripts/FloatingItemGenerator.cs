@@ -6,28 +6,32 @@ public class FloatingItemGenerator : MonoBehaviour
 {
     [SerializeField] GameObject itemPrefab;
     float timeBtwSpawn;
-    [SerializeField] float startTimeMin = 1f;
-    [SerializeField] float startTimeMax = 10f;
-    [SerializeField] float deltaTimeMod = 0.001f;
+    [SerializeField] [Range(0.1f, 10f)] float startTimeMin = 1f;
+    [SerializeField] [Range(1f, 10f)] float startTimeMax = 10f;
+    [SerializeField] [Range(0f, 1f)] float deltaTimeMod = 0.001f;
+    [SerializeField] [Range(0, 10000)] float distanceToStartSpawn = 0f;
     private void Start()
     {
         timeBtwSpawn = Random.Range(startTimeMin, startTimeMax);
     }
     void Update()
     {
-        if (timeBtwSpawn <= 0)
+        if (ScoreManager.Distance >= distanceToStartSpawn)
         {
-            GenarateItem();
-            if (startTimeMin > 0.01)
+            if (timeBtwSpawn <= 0)
             {
-                startTimeMin -= deltaTimeMod;
-                startTimeMax -= deltaTimeMod;
+                GenarateItem();
+                if (startTimeMin > 0.01)
+                {
+                    startTimeMin -= deltaTimeMod;
+                    startTimeMax -= deltaTimeMod;
+                }
+                timeBtwSpawn = Random.Range(startTimeMin, startTimeMax);
             }
-            timeBtwSpawn = Random.Range(startTimeMin, startTimeMax);
-        }
-        else
-        {
-            timeBtwSpawn -= Time.deltaTime;
+            else
+            {
+                timeBtwSpawn -= Time.deltaTime;
+            }
         }
     }
 

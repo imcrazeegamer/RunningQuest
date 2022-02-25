@@ -9,6 +9,8 @@
 - Player Crouch?
 - Player Attack?
 - Player Shot Projectiles?
+- Traps?
+
 
 ##### Goals:
 - Add More Types Of Enemys (Flying, homing, Tresures)

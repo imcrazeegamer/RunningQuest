@@ -6,7 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] GameObject gameOverOverlay;
-    public Vector2 velocity;
     public float jumpVelocity = 20;
     public bool isGrounded = false;
     float health = 1;

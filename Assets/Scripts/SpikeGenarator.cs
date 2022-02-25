@@ -12,8 +12,9 @@ public class SpikeGenarator : MonoBehaviour
     public float currentSpeed;
     float timeBtwSpawn;
     [SerializeField] float startTimeBtwSpawn = 2f;
-    [SerializeField] float startTimeDelta = 0.001f;
-    [SerializeField] float startTimeLimit = 0.1f;
+    [SerializeField] [Range(0f, 1f)] float startTimeDelta = 0.001f;
+    [SerializeField] [Range(0.001f, 2f)] float startTimeLimit = 0.1f;
+    [SerializeField] [Range(0, 10000)] float distanceToStartSpawn = 0f;
    
     void Awake()
     {
@@ -22,21 +23,28 @@ public class SpikeGenarator : MonoBehaviour
     }
     void Update()
     {
-        if (timeBtwSpawn <= 0)
+        if (ScoreManager.Distance >= distanceToStartSpawn)
         {
-            GenarateSpike();
-            if(startTimeBtwSpawn > startTimeLimit)
-                startTimeBtwSpawn -= startTimeDelta;
-            timeBtwSpawn = startTimeBtwSpawn;
-        }
-        else
-        {
-            timeBtwSpawn -= Time.deltaTime;
+            if (timeBtwSpawn <= 0)
+            {
+                GenarateSpike();
+                if (startTimeBtwSpawn > startTimeLimit)
+                    startTimeBtwSpawn -= startTimeDelta;
+                timeBtwSpawn = startTimeBtwSpawn;
+            }
+            else
+            {
+                timeBtwSpawn -= Time.deltaTime;
+            }
         }
     }
     public void GenarateSpike()
     {
-        spikePrefab.GetComponent<SpikeMovment>().currentSpeed = currentSpeed;
+        SpikeMovment sm;
+        if(TryGetComponent(out sm))
+        {
+            sm.currentSpeed = currentSpeed;
+        }
         Instantiate(spikePrefab, transform.position + new Vector3(Random.value * -1,0,0), Quaternion.identity, transform);
         //currentSpeed = Mathf.Log10(currentSpeed + speedDeltaFactor);
         if(currentSpeed < speedLimit)

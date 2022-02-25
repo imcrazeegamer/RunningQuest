@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6349512}
   - component: {fileID: 6349514}
   m_Layer: 0
-  m_Name: WitchGenerator
+  m_Name: SkeletonSpawner
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 1015812337
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1862840322, guid: fa49d74a2e4b33d4aaebb80712920b1f, type: 3}
+  m_Sprite: {fileID: -967026375, guid: 62cc7af7334646543aff3a24b3bac45a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -206,7 +206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 739045427}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6349514
 MonoBehaviour:
@@ -220,14 +220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eb72df6462944478204e9e5dd71955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spikePrefab: {fileID: 3801946151206020023, guid: 4d591ae41fbbe2f428a9207477e34a67, type: 3}
+  spikePrefab: {fileID: 4125354644676587612, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
   minSpeed: 2.5
   speedDeltaFactor: 0.001
   speedLimit: 10
-  currentSpeed: 0
+  currentSpeed: 1
   startTimeBtwSpawn: 4
   startTimeDelta: 0.001
   startTimeLimit: 0.1
+  distanceToStartSpawn: 5
 --- !u!1 &67895405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1214810305700776478}
   - {fileID: 6349513}
   - {fileID: 2135304503}
   - {fileID: 8744165905962298968}
@@ -1779,7 +1781,7 @@ GameObject:
   - component: {fileID: 756463959}
   m_Layer: 0
   m_Name: CoinEffect
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6838,7 +6840,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: gameover
     clip: {fileID: 8300000, guid: f77f26239f149f24f8d1455ad8e08a24, type: 3}
-    volume: 0.2
+    volume: 0.15
     pitch: 1
     source: {fileID: 0}
   - name: jump
@@ -8038,6 +8040,7 @@ GameObject:
   - component: {fileID: 1601528994}
   - component: {fileID: 1601528993}
   - component: {fileID: 1601528992}
+  - component: {fileID: 1601528995}
   m_Layer: 0
   m_Name: Despawner
   m_TagString: Despawner
@@ -8113,7 +8116,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.80784315}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8131,13 +8134,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601528991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.8, y: -0.52, z: 0}
-  m_LocalScale: {x: 2, y: 200, z: 1}
+  m_LocalPosition: {x: -18.14, y: -0.74, z: 0}
+  m_LocalScale: {x: 2, y: 200, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 739045427}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1601528995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601528991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31685980df33a8a43aa7d4156395a791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841027649
 GameObject:
   m_ObjectHideFlags: 0
@@ -8451,7 +8466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverOverlay: {fileID: 809372242}
-  velocity: {x: 0, y: 0}
   jumpVelocity: 450
   isGrounded: 1
 --- !u!50 &2036206538
@@ -8625,7 +8639,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 739045427}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2135304504
 MonoBehaviour:
@@ -8643,6 +8657,113 @@ MonoBehaviour:
   startTimeMin: 0.5
   startTimeMax: 1
   deltaTimeMod: 0.001
+  distanceToStartSpawn: 0
+--- !u!1 &1214810305700776453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214810305700776478}
+  - component: {fileID: 1214810305700776473}
+  - component: {fileID: 1214810305700776479}
+  m_Layer: 0
+  m_Name: WitchFlySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1214810305700776473
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214810305700776453}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1015812337
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1088614772, guid: e245f47bbf05d2c4a98b2b7af8a1f09c, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.625, y: 1.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1214810305700776478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214810305700776453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.08, y: 2.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 739045427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1214810305700776479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214810305700776453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eb72df6462944478204e9e5dd71955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikePrefab: {fileID: 8174690062752811625, guid: a22e7fde352b7ab4e920ac77a8837e9f, type: 3}
+  minSpeed: 1
+  speedDeltaFactor: 0.001
+  speedLimit: 10
+  currentSpeed: 1
+  startTimeBtwSpawn: 10
+  startTimeDelta: 0.001
+  startTimeLimit: 0.1
+  distanceToStartSpawn: 100
 --- !u!1 &1322083217299595944
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,7 +8813,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 739045427}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5809544244917503888
 SpriteRenderer:
@@ -8814,6 +8935,7 @@ MonoBehaviour:
   startTimeMin: 0.5
   startTimeMax: 10
   deltaTimeMod: 0
+  distanceToStartSpawn: 10
 --- !u!4 &8744165905962298968
 Transform:
   m_ObjectHideFlags: 0
@@ -8827,7 +8949,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 739045427}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8744165905962298969
 MonoBehaviour:
@@ -8845,3 +8967,4 @@ MonoBehaviour:
   startTimeMin: 1.5
   startTimeMax: 7
   deltaTimeMod: 0.001
+  distanceToStartSpawn: 30
