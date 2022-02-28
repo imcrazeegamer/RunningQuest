@@ -2,21 +2,42 @@
 ###Dev Doc
 
 ##### Do It Now:
-- Enemys That Move Up And Down
-- Enemys That Show Projectile Towrds Player And then do off Screen
+- damage, Heal and money Markers
+-sheild sound effect
+
+
+### Bugs
+
+##### Goals:
+- Main Menu
+- Setting
+- Ads to Continue
+
+##### Ideas 
+- Enemys Move Up And Down
 - Enemys That Spawn explotion on where player is in 2 seconds
-- Gradualy add more monsters the farther you get (every 100m)
+- Spikes/LandMine On Ground
+- Skelotons That Swing At you
 - Player Crouch?
 - Player Attack?
 - Player Shot Projectiles?
 - Traps?
-
-
-##### Goals:
-- Add More Types Of Enemys (Flying, homing, Tresures)
-- Make Player Able To attack
-- Basic Shop
-- Have A Unlock System That Cost Schmekels
-- Have A endless Upgrade System That Cost Schmekels
 - Cosmetics that Cost Schmekels?
-- Main Menu
+- Money Magnet
+
+##### Shop Ideas
+- Inviciblity Frames On Jump/ After Take Damage
+- Food Spawn Rate/ Food Heal Value
+- Player Melee Pary / multiplyer
+- Game Speed
+- MegaCOin VAlue
+- Pet That Auto Attacks Enemys
+
+~ Make everthing move at same speed that can be controlled
+~ Slimes with Springs on head
+~ Gradualy add more monsters the farther you get (every 100m)
+~ Shop With Upgrades
+~ Add Hp Regen
+~ Add MultiJumps
+~ Add Sheild
+~ Main Menu

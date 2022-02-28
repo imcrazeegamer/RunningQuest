@@ -119,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.034083247}
@@ -150,8 +150,10 @@ MonoBehaviour:
   currentSpeed: 1
   moveVector: {x: -1, y: 0}
   projectile: {fileID: 1325341682703337632, guid: 0ed0b2f0efe45f143a9940a4928883ad, type: 3}
+  popupPrefab: {fileID: 8934188439737357399, guid: fb8f89a0bd4ee1e448da3dbc5dbafd91, type: 3}
   startTimeMin: 1
   startTimeMax: 10
+  destroyOnPlayerCollision: 1
 --- !u!95 &8098183615922828673
 Animator:
   serializedVersion: 4

@@ -10,12 +10,14 @@ public class SaveData
     public bool[] unlocks;
     public int[] upgrades;
 
-    public SaveData(float hDistance, int schmekels)
+    public SaveData(float hDistance, int schmekels,int[] upgrades)
     {
         this.highDistance = hDistance;
         this.schmekels = schmekels;
         unlocks = new bool[] { false, false, false };
-        upgrades = new int[] { 0, 0, 0 };
+        if (upgrades == null || upgrades.Length == 0)
+            upgrades = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        this.upgrades = upgrades;
     }
     public SaveData()
     {

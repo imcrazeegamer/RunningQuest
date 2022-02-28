@@ -272,6 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78bbae16c09fee4884a61da43625f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  targetPos: {x: -2.5, y: 2.178863, z: 0}
-  effectedStat: 2
+  targetPos: {x: -2.2759018, y: 2.1380062, z: 0}
+  Speed: 2
+  effectedStat: 3

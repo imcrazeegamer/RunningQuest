@@ -15,7 +15,7 @@ public class Parallax : MonoBehaviour
 
     void LateUpdate()
     {
-        offset = parrlaxEffectMulti * Time.deltaTime;
+        offset = parrlaxEffectMulti * Time.deltaTime * ScoreManager.GameSpeed * 0.28f;
         material.mainTextureOffset += offset;
     }
 }

@@ -35,7 +35,10 @@ public class GameOverOverlay : MonoBehaviour
     }
     public void GoToShop()
     {
+        ScoreManager.Distance = 0;
         Time.timeScale = 1f;
+        ScoreManager.SaveScore();
         SceneManager.LoadScene("Shop");
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Shop"));
     }
 }

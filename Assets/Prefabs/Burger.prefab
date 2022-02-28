@@ -136,5 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0b0e92b9e546646a07a022b62c98c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 2
-  effectedStat: 1
+  moveVector: {x: -1, y: 0}
+  effectedStat: 2
+  Speed: 1
+  popupPrefab: {fileID: 8934188439737357399, guid: fb8f89a0bd4ee1e448da3dbc5dbafd91, type: 3}
