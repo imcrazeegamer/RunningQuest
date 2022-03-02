@@ -47,7 +47,13 @@ public class ShopUI : MonoBehaviour
     {
         ScoreManager.Upgrades = ScoreManager.UpgradesToIntArray(Upgrades);
         ScoreManager.SaveScore();
-        SceneManager.LoadScene("Battle");
+        SceneManager.LoadScene("Heat");
+    }
+    public void BackToMainMenu()
+    {
+        ScoreManager.Upgrades = ScoreManager.UpgradesToIntArray(Upgrades);
+        ScoreManager.SaveScore();
+        SceneManager.LoadScene("MainMenu");
     }
     public void Refound()
     {

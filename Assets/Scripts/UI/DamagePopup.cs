@@ -17,6 +17,7 @@ public class DamagePopup : MonoBehaviour
     void Awake()
     {
         textMesh = GetComponent<TextMeshPro>();
+
     }
     void Setup(int damageAmount, bool isGold)
     {

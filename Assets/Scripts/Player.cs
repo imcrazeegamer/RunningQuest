@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] GameObject damagePopupPrefab;
     [SerializeField] GameObject gameOverOverlay;
+    [SerializeField] GameObject pauseOverlay;
+    [SerializeField] GameObject pauseBtn;
     [SerializeField] Transform Shield;
     
     public float jumpVelocity = 20;
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
     {
         if (health <= 0)
         {
+            pauseBtn.SetActive(false);
             gameOverOverlay.SetActive(true);
 
         }
@@ -43,7 +46,10 @@ public class Player : MonoBehaviour
         }
         ScoreManager.Distance += Time.deltaTime * ScoreManager.GameSpeed/2;
         animator.SetBool("IsJumping", currentJumps != maxJumps);
-        
+       if (Input.GetKeyDown(KeyCode.Escape))
+       {
+            pauseOverlay.SetActive(true);
+       }
     }
     private float jumpMod()
     {

@@ -5,16 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {   
-    public void BattleScene()
+    public static void Change(string s)
     {
-        SceneManager.LoadScene("Battle");
-    }
-    public void MenuScene()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void ShopScene()
-    {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene(s);
     }
 }

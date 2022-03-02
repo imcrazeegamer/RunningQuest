@@ -47,6 +47,8 @@ public class ItemMovment : MonoBehaviour
                     break;
                 case EffectedStat.Damage:
                     player.TakeDamage(0.2f);
+                    Collider2D collider = self.GetComponent<Collider2D>();
+                    collider.enabled = false;
                     script.StartCoroutine(AnimateHit(self));
                     break;
                 case EffectedStat.Sheild:

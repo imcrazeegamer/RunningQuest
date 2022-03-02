@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: e15ef11edabdcda478fd98ccb07aa662
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: ecf7d12be2a6c744693eb1538809331d
+  - enabled: 1
+    path: Assets/Scenes/Heat.unity
+    guid: 8629989be7bc7d44f968371a41f13103
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: c3749fd2775ebc34fba61321b51fc803, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 021f1d7813161a2418cdb58a504186d0, type: 2}

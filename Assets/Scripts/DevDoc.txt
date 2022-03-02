@@ -2,16 +2,26 @@
 ###Dev Doc
 
 ##### Do It Now:
-- damage, Heal and money Markers
--sheild sound effect
+- Heat System, The More Heat The More Distance You travers and the more money coins are worth
+- Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
+- When I Scale Game Speed Change Background
+- Sheild Equip sound effect
+- Shop Sound Effects
+- Shop Music
+- Scene Transition
+- More Battle Music
 
 
-### Bugs
+
 
 ##### Goals:
-- Main Menu
-- Setting
-- Ads to Continue
+- Make Game Scale Infinitly
+- Make Share Score Feature
+- Setting for volume and to reset save
+- Ads to Continue, ads every 5 games
+
+##### Bug List:
+
 
 ##### Ideas 
 - Enemys Move Up And Down
@@ -27,17 +37,11 @@
 
 ##### Shop Ideas
 - Inviciblity Frames On Jump/ After Take Damage
-- Food Spawn Rate/ Food Heal Value
 - Player Melee Pary / multiplyer
-- Game Speed
-- MegaCOin VAlue
 - Pet That Auto Attacks Enemys
 
-~ Make everthing move at same speed that can be controlled
-~ Slimes with Springs on head
-~ Gradualy add more monsters the farther you get (every 100m)
-~ Shop With Upgrades
-~ Add Hp Regen
-~ Add MultiJumps
-~ Add Sheild
-~ Main Menu
+~ Fixed all bugs
+~ added Pause
+~ added cinematography and lighting
+~ added Settings
+~ Heat System Backend Ready Isnt Enabled Yet

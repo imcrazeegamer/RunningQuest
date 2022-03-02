@@ -15,6 +15,5 @@ public class HomeingMovment : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ItemMovment.HandleCollision(this, gameObject, effectedStat, collision);
-        
     }
 }
