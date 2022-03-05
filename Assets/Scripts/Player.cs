@@ -27,6 +27,10 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         currentJumps = maxJumps;
     }
+    private void Start()
+    {
+        AudioManager.instance.Play("music");
+    }
     void Update()
     {
         if (health <= 0)
@@ -80,6 +84,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            amount += amount * 0.1f * HeatHandler.GetHeatValue(HeatType.DamageTaken);
             health -= amount;
             DamagePopup.Create(damagePopupPrefab, transform.position,(int)(amount * 100));
             Animator a;
@@ -91,16 +96,22 @@ public class Player : MonoBehaviour
         }
         //Debug.Log($"Player HP: {health}");
     }
-    void HpRegen()
+    public void Heal(float amount)
     {
-        if (health + hpRegen > 1)
+        amount -= amount * HeatHandler.GetHeatValue(HeatType.HealAmount) * 0.1f;
+        if (health + amount > 1)
         {
             health = 1;
         }
         else if (health < 1)
         {
-            health += hpRegen * Time.deltaTime * ScoreManager.GameSpeed/2;
+            health += amount;
         }
+    }
+    void HpRegen()
+    {
+        Heal(hpRegen * Time.deltaTime);
+        
     }
     public void TurnOnSheild()
     {

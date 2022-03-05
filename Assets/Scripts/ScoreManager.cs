@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     public static int Schmekels = 0;
     
     public static float __HiDistance = 0;
-    public static float GameSpeed = 2f;
+    public static float GameSpeed { get => 2f + HeatHandler.GetHeatValue(HeatType.GameSpeed)*0.1f; }
     public static int[] Upgrades = new[] {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     public static float Distance = 0;
@@ -20,10 +20,7 @@ public class ScoreManager : MonoBehaviour
     public static int Heat { get => HeatList.Sum(x => x); }
     public static float GoldMulti { get => 1 + (Heat / 10f); }
     public static float DistanceMulti { get => 1 + (Heat / 15f); }
-    [SerializeField] TextMeshProUGUI ScoreText;
-    [SerializeField] TextMeshProUGUI DistanceText;
-    [SerializeField] TextMeshProUGUI HiScoreText;
-    [SerializeField] TextMeshProUGUI HeatText;
+    
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -34,18 +31,11 @@ public class ScoreManager : MonoBehaviour
         {
             _instance = this;
         }
+        
         ReloadScore();
-        GetComponent<UpgradeHandler>().LoadUpgrades();
+        FindObjectOfType<UpgradeHandler>().LoadUpgrades();
         DontDestroyOnLoad(gameObject);
     }
-    private void FixedUpdate()
-    {
-        ScoreText.text = $"Schmekels: {Schmekels}";
-        DistanceText.text = $"Distance: {System.Math.Round(Distance, 1)}m";
-        HiScoreText.text = $"HiScore: {System.Math.Round(__HiDistance, 2)}m";
-        HeatText.text = $"Heat: {Heat}";
-    }
-
     public static int[] UpgradesToIntArray(Upgrade[] upgrades)
     {
         int[] arr = new int[upgrades.Length];

@@ -31,12 +31,18 @@ public class PauseOverlay : MonoBehaviour
     }
     public void GoToShop()
     {
-        Save();
+        ChangeScene();
         SceneManager.LoadScene("Shop");
     }
     public void GoToMainMenu()
     {
-        Save();
+        ChangeScene();
         SceneManager.LoadScene("MainMenu");
+    }
+    void ChangeScene()
+    {
+        AudioManager.instance.Resume("music");
+        AudioManager.instance.Stop("music");
+        Save();
     }
 }

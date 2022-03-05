@@ -11,7 +11,11 @@ public class SpikeGenarator : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] float startTimeDelta = 0.001f;
     [SerializeField] [Range(0.001f, 2f)] float startTimeLimit = 0.1f;
     [SerializeField] [Range(0, 10000)] float distanceToStartSpawn = 0f;
-   
+
+    void Start()
+    {
+        startTimeBtwSpawn -= startTimeBtwSpawn * HeatHandler.GetHeatValue(HeatType.SpawnRate) * 0.1f;
+    }
     void Update()
     {
         if (ScoreManager.Distance >= distanceToStartSpawn)

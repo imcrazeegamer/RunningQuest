@@ -38,10 +38,7 @@ public class ItemMovment : MonoBehaviour
                     Destroy(self);
                     break;
                 case EffectedStat.Hp:
-                    if (player.Hp + 0.2f > 1)
-                        player.Hp = 1;
-                    else
-                        player.Hp += 0.2f;
+                    player.Heal(0.2f); 
                     AudioManager.instance.Play("food");
                     Destroy(self);
                     break;

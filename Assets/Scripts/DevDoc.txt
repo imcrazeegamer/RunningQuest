@@ -2,6 +2,9 @@
 ###Dev Doc
 
 ##### Do It Now:
+- Make Gold Multi Work
+- Make Distance Multi Work
+
 - Heat System, The More Heat The More Distance You travers and the more money coins are worth
 - Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
 - When I Scale Game Speed Change Background
@@ -12,8 +15,6 @@
 - More Battle Music
 
 
-
-
 ##### Goals:
 - Make Game Scale Infinitly
 - Make Share Score Feature
@@ -21,6 +22,8 @@
 - Ads to Continue, ads every 5 games
 
 ##### Bug List:
+- No Music After Heat Screen
+- Check Hp Regen
 
 
 ##### Ideas 

@@ -34,9 +34,9 @@ public class HeatSelection : MonoBehaviour
 }
 public enum HeatType
 {
-    GameSpeed,
-    DamageTaken,
-    JumpSacrifice,
-    HealAmount,
-    SpawnRate
+    GameSpeed, //V
+    DamageTaken, //V
+    JumpSacrifice, // change
+    HealAmount, //V
+    SpawnRate //V
 }
