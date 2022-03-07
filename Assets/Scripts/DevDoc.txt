@@ -4,6 +4,7 @@
 ##### Do It Now:
 - Make Gold Multi Work
 - Make Distance Multi Work
+- Main Menu Click On Coins To Get Shmekels Play the effects also
 
 - Heat System, The More Heat The More Distance You travers and the more money coins are worth
 - Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
@@ -18,7 +19,6 @@
 ##### Goals:
 - Make Game Scale Infinitly
 - Make Share Score Feature
-- Setting for volume and to reset save
 - Ads to Continue, ads every 5 games
 
 ##### Bug List:

@@ -14,7 +14,12 @@ public class SpikeGenarator : MonoBehaviour
 
     void Start()
     {
-        startTimeBtwSpawn -= startTimeBtwSpawn * HeatHandler.GetHeatValue(HeatType.SpawnRate) * 0.1f;
+        float HeatMod = startTimeBtwSpawn * HeatHandler.GetHeatValue(HeatType.SpawnRate) * 0.05f;
+        startTimeBtwSpawn -= HeatMod;
+        if (startTimeBtwSpawn <= startTimeLimit)
+        {
+            startTimeBtwSpawn = startTimeLimit;
+        }
     }
     void Update()
     {
