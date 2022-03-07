@@ -2,19 +2,24 @@
 ###Dev Doc
 
 ##### Do It Now:
-- Make Gold Multi Work
-- Make Distance Multi Work
+
+- Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
+- Add the StrongerMonterHeatMod
+
 - Main Menu Click On Coins To Get Shmekels Play the effects also
 
-- Heat System, The More Heat The More Distance You travers and the more money coins are worth
-- Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
-- When I Scale Game Speed Change Background
 - Sheild Equip sound effect
 - Shop Sound Effects
 - Shop Music
 - Scene Transition
 - More Battle Music
 
+##### Enemy Upgrades
+- 1 Skelotons move up and down
+- 2 Skelotons Attack
+- 3 Add Witches To the Ground/land mines
+- 4 Witches in Air, Shot multiProjectiles
+- 5 Add a Flying Boss Unit That Show A Damage Marker and then Summones explotion there after 1 sec
 
 ##### Goals:
 - Make Game Scale Infinitly
@@ -22,8 +27,6 @@
 - Ads to Continue, ads every 5 games
 
 ##### Bug List:
-- No Music After Heat Screen
-- Check Hp Regen
 
 
 ##### Ideas 
@@ -43,8 +46,5 @@
 - Player Melee Pary / multiplyer
 - Pet That Auto Attacks Enemys
 
-~ Fixed all bugs
-~ added Pause
-~ added cinematography and lighting
-~ added Settings
-~ Heat System Backend Ready Isnt Enabled Yet
+~added More Backgrounds
+~added Gold and Distance Multi

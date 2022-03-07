@@ -56,8 +56,8 @@ public class FlyingMovment : MonoBehaviour
         {
             if (destroyOnPlayerCollision)
             {
-                ScoreManager.Schmekels += 100;
-                DamagePopup.Create(popupPrefab, gameObject.transform.position, 100, true);
+                ScoreManager.AddSchmekels(100);
+                DamagePopup.Create(popupPrefab, gameObject.transform.position, ScoreManager.SchmekelCalc(100), true);
                 Destroy(gameObject);
             }
             else

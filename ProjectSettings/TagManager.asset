@@ -12,7 +12,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PostProcess
+  - NoLight
   - Water
   - UI
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 496425167
+    locked: 0
+  - name: NoLight
+    uniqueID: 3122600771
     locked: 0
   - name: Ground
     uniqueID: 2869123361

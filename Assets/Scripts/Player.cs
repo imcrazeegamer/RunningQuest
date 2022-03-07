@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.Play("jump");
             currentJumps--;
         }
-        ScoreManager.Distance += Time.deltaTime * ScoreManager.GameSpeed/2;
+        ScoreManager.AddDistance(Time.deltaTime);
         animator.SetBool("IsJumping", currentJumps != maxJumps);
        if (Input.GetKeyDown(KeyCode.Escape))
        {

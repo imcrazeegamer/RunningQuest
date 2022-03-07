@@ -24,16 +24,16 @@ public class ItemMovment : MonoBehaviour
             switch (stat)
             {
                 case EffectedStat.Schmekels:
-                    ScoreManager.Schmekels++;
+                    ScoreManager.AddSchmekels(1);
                     AudioManager.instance.Play("coin");
-                    DamagePopup.Create(prefabPopup, self.transform.position, 1, true);
+                    DamagePopup.Create(prefabPopup, self.transform.position, ScoreManager.SchmekelCalc(1), true);
                     collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
                     Destroy(self);
                     break;
                 case EffectedStat.SchmekelsUltra:
-                    ScoreManager.Schmekels += 10;
+                    ScoreManager.AddSchmekels(10);
                     AudioManager.instance.Play("coin");
-                    DamagePopup.Create(prefabPopup, self.transform.position, 10, true);
+                    DamagePopup.Create(prefabPopup, self.transform.position, ScoreManager.SchmekelCalc(10), true);
                     collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
                     Destroy(self);
                     break;

@@ -36,7 +36,7 @@ public enum HeatType
 {
     GameSpeed, //V
     DamageTaken, //V
-    JumpSacrifice, // change
+    StrogerFoes, // change
     HealAmount, //V
     SpawnRate //V
 }

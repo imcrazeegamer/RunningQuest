@@ -17,10 +17,10 @@ public class ScoreManager : MonoBehaviour
 
     public static float Distance = 0;
     public static List<int> HeatList = new List<int>() { 0, 0, 0, 0, 0 };
-    public static int Heat { get => HeatList.Sum(x => x); }
-    public static float GoldMulti { get => 1 + (Heat / 10f); }
-    public static float DistanceMulti { get => 1 + (Heat / 15f); }
-    
+    public static int Heat = 0;
+    public static float GoldMulti { get => 1 + (Heat / 5f); }
+    public static float DistanceMulti { get => 1 + (Heat / 10f); }
+    public static int GetCurrentHeat { get => HeatList.Sum(x => x); }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -31,9 +31,10 @@ public class ScoreManager : MonoBehaviour
         {
             _instance = this;
         }
-        
+        Heat = HeatList.Sum(x => x);
         ReloadScore();
         FindObjectOfType<UpgradeHandler>().LoadUpgrades();
+        FindObjectOfType<BackgroundHandler>().SwitchBackground(Heat);
         DontDestroyOnLoad(gameObject);
     }
     public static int[] UpgradesToIntArray(Upgrade[] upgrades)
@@ -56,5 +57,17 @@ public class ScoreManager : MonoBehaviour
     {        
         SaveSystem.SaveGame(new SaveData(__HiDistance, Schmekels, Upgrades));
     }
+
+    public static void AddSchmekels(int amount)
+    {
+        Schmekels += SchmekelCalc(amount);
+    }
+    public static void AddDistance(float amount)
+    {
+        Distance += DistanceCalc(amount);
+    }
+    public static int SchmekelCalc(int amount) { return (int)(amount * GoldMulti); }
+    public static float DistanceCalc(float amount) { return amount * DistanceMulti; }
+
 
 }
