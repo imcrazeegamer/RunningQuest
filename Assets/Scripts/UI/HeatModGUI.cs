@@ -10,6 +10,7 @@ public class HeatModGUI : MonoBehaviour
     public TextMeshProUGUI nameTxt;
     public TextMeshProUGUI modValue;
     public TextMeshProUGUI heatPer;
+    public int maxLevel = -1;
     public int level = 0;
     public int heatLevel = 0;
 
@@ -18,6 +19,10 @@ public class HeatModGUI : MonoBehaviour
         if (level + delta < 0)
         {
             level = 0;
+        }
+        else if (maxLevel != -1 && level + delta > maxLevel)
+        {
+            level = maxLevel;
         }
         else
         {

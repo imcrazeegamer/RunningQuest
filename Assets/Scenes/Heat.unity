@@ -663,6 +663,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 173145831}
     m_Modifications:
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: maxLevel
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290716883251057, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_text
       value: Spawn Rate
@@ -673,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
-      value: HeatMod (4)
+      value: Spawn
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460963, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Pivot.x
@@ -1350,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
-      value: HeatMod (1)
+      value: DamageTaken
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460963, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Pivot.x
@@ -1892,6 +1896,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 173145831}
     m_Modifications:
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: maxLevel
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290716883251057, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_text
       value: Heal Amount
@@ -1902,7 +1910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
-      value: HeatMod (3)
+      value: Heal
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460963, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Pivot.x
@@ -2006,6 +2014,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 173145831}
     m_Modifications:
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: maxLevel
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290716661546994, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
@@ -2024,7 +2036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
-      value: HeatMod (2)
+      value: StrogerFoes
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460963, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Pivot.x
@@ -2130,7 +2142,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
-      value: HeatMod
+      value: GameSpeed
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460963, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Pivot.x
