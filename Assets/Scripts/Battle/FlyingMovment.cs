@@ -12,9 +12,10 @@ public class FlyingMovment : MonoBehaviour
     [SerializeField] [Range(0.1f, 10f)] float startTimeMin = 1f;
     [SerializeField] [Range(1f, 10f)] float startTimeMax = 10f;
     [SerializeField] bool destroyOnPlayerCollision = false;
+    bool upgraded;
     void Start()
     {
-        
+        upgraded = HeatHandler.GetHeatValue(HeatType.StrogerFoes) >= 8;
     }
     void FixedUpdate()
     {
@@ -34,21 +35,21 @@ public class FlyingMovment : MonoBehaviour
     public void GenarateProjectile()
     {
         
-        //yield return new WaitForSeconds(1f);
-        //a.SetBool("isCharging", false);
+        
         Vector3 from = transform.position + new Vector3(-0.3f, -0.3f, 0);
         Vector3 to = FindObjectOfType<Player>().transform.position;
-        //Vector3 dir = to - from;
         projectile.GetComponent<HomeingMovment>().targetPos = to;
 
-        var p = Instantiate(projectile, from, Quaternion.identity, transform);
-        //p.transform.LookAt(to);
-        //float rot_z = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        //p.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-        //var r = p.transform.rotation;
-        //p.transform.rotation = new Quaternion(0, 0, r.x, r.w);
+        Instantiate(projectile, from, Quaternion.identity, transform);
+
+        if (upgraded)
+        {
+            Instantiate(projectile, transform.position + new Vector3(-0.1f, -0.6f, 0), Quaternion.identity, transform);
+            Instantiate(projectile, transform.position + new Vector3(-0.5f,  0f, 0), Quaternion.identity, transform);
+        }
 
     }
+    
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

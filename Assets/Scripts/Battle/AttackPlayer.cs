@@ -10,7 +10,7 @@ public class AttackPlayer : MonoBehaviour
     [SerializeField] float attackWait = 0.5f;
     [SerializeField] float attackSpeed = 1f;
 
-    bool canAttack = true;
+    bool canAttack;
     Player player;
     float playerDistance;
     Animator animator;
@@ -19,7 +19,7 @@ public class AttackPlayer : MonoBehaviour
         player = FindObjectOfType<Player>();
         animator = GetComponent<Animator>();
         int heatValue = HeatHandler.GetHeatValue(HeatType.StrogerFoes);
-        //canAttack = heatValue > 2;
+        canAttack = heatValue > 2;
         attackWait = heatValue > 4 ? attackWait * (1 / heatValue) : attackWait;
         attackSpeed = heatValue > 4 ? attackWait * (1 / heatValue) : attackWait;
         animator.SetFloat("AttackSpeed", attackSpeed);
@@ -39,16 +39,17 @@ public class AttackPlayer : MonoBehaviour
                     StartCoroutine(Attack());
                 }
             }
-            else
-            {
-                animator.SetBool("isAttack", false);
-            }
         }
     }
     IEnumerator Attack()
     {
-        Debug.Log("attacking Player");
+        //Debug.Log("attacking Player");
         animator.SetBool("isAttack", true);
         yield return new WaitForSeconds(attackWait);
+        
+    }
+    public void ResetAnimation()
+    {
+        animator.SetBool("isAttack", false);
     }
 }

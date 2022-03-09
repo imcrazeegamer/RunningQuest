@@ -3,9 +3,7 @@
 
 ##### Do It Now:
 
-- Make Upgraded Versions Of enemys (they Move Up And Down, Do More Damage More Machnices)
-- Add the StrongerMonterHeatMod
-
+- Add boss paritacls
 - Main Menu Click On Coins To Get Shmekels Play the effects also
 
 - Sheild Equip sound effect
@@ -15,14 +13,13 @@
 - More Battle Music
 
 ##### Enemy Upgrades
-- 1 Skelotons move up and down
-- 2 Skelotons Attack
-- 3 Add Witches To the Ground/land mines
-- 4 Witches in Air, Shot multiProjectiles
-- 5 Add a Flying Boss Unit That Show A Damage Marker and then Summones explotion there after 1 sec
+- 1 Skelotons move up and down V
+- 2 Skelotons Attack V
+- 3 Big Slime V
+- 4 Witches in Air, Shot multiProjectiles V
+- 5 Add a Flying Boss Unit That Show A Damage Marker and then Summones explotion there after 1 sec V
 
 ##### Goals:
-- Make Game Scale Infinitly
 - Make Share Score Feature
 - Ads to Continue, ads every 5 games
 
@@ -46,4 +43,3 @@
 - Player Melee Pary / multiplyer
 - Pet That Auto Attacks Enemys
 
-~

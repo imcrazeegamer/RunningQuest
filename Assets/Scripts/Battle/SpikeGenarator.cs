@@ -6,6 +6,8 @@ using UnityEngine;
 public class SpikeGenarator : MonoBehaviour
 {
     [SerializeField] GameObject spikePrefab;
+    [SerializeField] GameObject upgradedPrefab;
+    [SerializeField] int minheat = 2;
     float timeBtwSpawn;
     [SerializeField] float startTimeBtwSpawn = 2f;
     [SerializeField] [Range(0f, 1f)] float startTimeDelta = 0.001f;
@@ -14,6 +16,10 @@ public class SpikeGenarator : MonoBehaviour
 
     void Start()
     {
+        if (HeatHandler.GetHeatValue(HeatType.StrogerFoes) >= minheat)
+        {
+            spikePrefab = upgradedPrefab;
+        }
         float HeatMod = startTimeBtwSpawn * HeatHandler.GetHeatValue(HeatType.SpawnRate) * 0.05f;
         startTimeBtwSpawn -= HeatMod;
         if (startTimeBtwSpawn <= startTimeLimit)
