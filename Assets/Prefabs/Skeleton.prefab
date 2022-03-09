@@ -169,4 +169,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0.3
   isDestroy: 0
-  isMoveVertical: 1

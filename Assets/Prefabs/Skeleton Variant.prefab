@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8107947494704721382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4125354644676587609, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_Color.b
+      value: 0.35095525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587609, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_Color.g
+      value: 0.35095525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587609, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33927846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.51170504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587610, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587612, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: m_Name
+      value: Skeleton Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+--- !u!1 &5315658752854072762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4125354644676587612, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+  m_PrefabInstance: {fileID: 8107947494704721382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-161996024728794579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5315658752854072762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c812deb25dd5744a4a7ac28d084a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMelee: 1
+  attackRange: 2.5
+  attackWait: 0.5
+  attackSpeed: 0.5
