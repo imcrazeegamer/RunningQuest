@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 688104740323633670}
   - component: {fileID: 7608900945869615149}
   - component: {fileID: 6146847025033866488}
-  - component: {fileID: 8000640232049839731}
   - component: {fileID: 7284197233380205116}
   - component: {fileID: 687566545804446069}
+  - component: {fileID: 3440121461135816685}
   m_Layer: 0
   m_Name: Boss Witch
   m_TagString: Untagged
@@ -109,18 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8000640232049839731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2228183780859188221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24b131a33c08924f8013045001b0b91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7284197233380205116
 Rigidbody2D:
   serializedVersion: 4
@@ -158,6 +146,18 @@ CapsuleCollider2D:
   m_Offset: {x: 1.0053389, y: 0.023108775}
   m_Size: {x: 0.35913944, y: 0.8217859}
   m_Direction: 0
+--- !u!114 &3440121461135816685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228183780859188221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175b2f2c742389f459f77f63168b1933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4219166994283542569
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4219166994283542569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc21d15379cee5f469603ff5636308f8, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb9a70aefc8c914782a9936b0dcc0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 0.5

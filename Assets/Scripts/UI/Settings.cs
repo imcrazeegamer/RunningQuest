@@ -24,7 +24,7 @@ public class Settings : MonoBehaviour
     {
         isMusic = Music.GetComponentInChildren<Toggle>().isOn;
         isSFX = SFX.GetComponentInChildren<Toggle>().isOn;
-        SceneManager.LoadScene("MainMenu");
+        LevelLoader.Instance.LoadNextLevel("MainMenu");
     }
     public void ResetGameSave()
     {

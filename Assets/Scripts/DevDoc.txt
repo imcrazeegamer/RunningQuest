@@ -2,15 +2,12 @@
 ###Dev Doc
 
 ##### Do It Now:
-
-- Add boss paritacls
-- Main Menu Click On Coins To Get Shmekels Play the effects also
-
 - Sheild Equip sound effect
 - Shop Sound Effects
 - Shop Music
-- Scene Transition
 - More Battle Music
+- 
+
 
 ##### Enemy Upgrades
 - 1 Skelotons move up and down V
@@ -43,3 +40,6 @@
 - Player Melee Pary / multiplyer
 - Pet That Auto Attacks Enemys
 
+~ Scene Transition
+~ Main Menu Click On Coins To Get Shmekels Play the effects also
+~ Show On Death Screen Current Score, Hi Score, HeatBreakdown so it can be shared

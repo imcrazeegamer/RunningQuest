@@ -32,12 +32,12 @@ public class PauseOverlay : MonoBehaviour
     public void GoToShop()
     {
         ChangeScene();
-        SceneManager.LoadScene("Shop");
+        LevelLoader.Instance.LoadNextLevel("Shop");
     }
     public void GoToMainMenu()
     {
         ChangeScene();
-        SceneManager.LoadScene("MainMenu");
+        LevelLoader.Instance.LoadNextLevel("MainMenu");
     }
     void ChangeScene()
     {

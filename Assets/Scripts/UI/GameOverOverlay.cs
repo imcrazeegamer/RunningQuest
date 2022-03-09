@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOverOverlay : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI DistanceText;
+    [SerializeField] List<TextMeshProUGUI> HeatText;
 
     private void OnEnable()
     {
@@ -15,7 +16,11 @@ public class GameOverOverlay : MonoBehaviour
             ScoreManager.__HiDistance = ScoreManager.Distance;
         }
         ScoreManager.SaveScore();
-        DistanceText.text = $"Distance: {System.Math.Round(ScoreManager.Distance, 2)}m";
+        DistanceText.text = $"Distance: {System.Math.Round(ScoreManager.Distance, 2)}m \r\n High Score: {System.Math.Round(ScoreManager.__HiDistance, 2)}m";
+        for (int i = 0; i < ScoreManager.HeatList.Count; i++)
+        {
+            HeatText[i].text = ScoreManager.HeatList[i].ToString();
+        }
         AudioManager.instance.Stop("music");
         AudioManager.instance.Play("gameover");
         Time.timeScale = 0f;
@@ -25,7 +30,8 @@ public class GameOverOverlay : MonoBehaviour
     {
         ScoreManager.Distance = 0;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LevelLoader.Instance.LoadNextLevel(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ContinueLevel()
     {
@@ -36,9 +42,8 @@ public class GameOverOverlay : MonoBehaviour
     public void GoToShop()
     {
         ScoreManager.Distance = 0;
-        Time.timeScale = 1f;
         ScoreManager.SaveScore();
-        SceneManager.LoadScene("Shop");
+        LevelLoader.Instance.LoadNextLevel("Shop");
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Shop"));
     }
 }
