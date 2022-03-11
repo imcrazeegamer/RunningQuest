@@ -33,9 +33,9 @@ public class ShopUI : MonoBehaviour
     }
     private void UpgradeClick(Upgrade upgrade, GameObject shopUpgrade)
     {
-        if (ScoreManager.Schmekels >= upgrade.Cost)
+        if (ScoreManager.Schmekels >= (ulong)upgrade.Cost)
         {
-            ScoreManager.Schmekels -= upgrade.Cost;
+            ScoreManager.Schmekels -= (ulong)upgrade.Cost;
             upgrade.Level++;
             UpdateUpgradeGUI(upgrade, shopUpgrade);
             PlayerShmekels.text = ScoreManager.Schmekels.ToString();
@@ -64,7 +64,7 @@ public class ShopUI : MonoBehaviour
             upgrade.Level = 0;
             UpdateUpgradeGUI(upgrade, upgrade.instance);
         }
-        ScoreManager.Schmekels += (int)(amount * 0.75f);
+        ScoreManager.Schmekels += (ulong)(amount * 0.75f);
         PlayerShmekels.text = ScoreManager.Schmekels.ToString();
 
     }

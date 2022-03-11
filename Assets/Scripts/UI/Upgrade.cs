@@ -10,7 +10,7 @@ public class Upgrade
     public int initalCost;
     [Range(1f, 2f)] public float costMultiplyer;
     public int Level = 0;
-    [HideInInspector] public int Cost { get => (int)(initalCost + Mathf.Pow(6 * costMultiplyer, Level+2)); }
+    [HideInInspector] public int Cost { get => (int)(initalCost + Mathf.Pow(costMultiplyer, Level)); }
     [HideInInspector] public GameObject instance;
     public int moneySpent()
     {

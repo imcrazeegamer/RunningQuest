@@ -16,10 +16,12 @@ public class FlyingMovment : MonoBehaviour
     void Start()
     {
         upgraded = HeatHandler.GetHeatValue(HeatType.StrogerFoes) >= 8;
+        startTimeMin /= ScoreManager.GameSpeed;
+        startTimeMax /= ScoreManager.GameSpeed;
     }
     void FixedUpdate()
     {
-        transform.Translate(moveVector * currentSpeed * Time.deltaTime);
+        transform.Translate(moveVector * currentSpeed * Time.deltaTime * ScoreManager.GameSpeed);
         if (timeBtwSpawn <= 0)
         {
             Animator a = GetComponent<Animator>();
@@ -57,8 +59,8 @@ public class FlyingMovment : MonoBehaviour
         {
             if (destroyOnPlayerCollision)
             {
-                ScoreManager.AddSchmekels(100);
-                DamagePopup.Create(popupPrefab, gameObject.transform.position, ScoreManager.SchmekelCalc(100), true);
+                ScoreManager.AddSchmekels(15);
+                DamagePopup.Create(popupPrefab, gameObject.transform.position, ScoreManager.SchmekelCalc(15), true);
                 Destroy(gameObject);
             }
             else

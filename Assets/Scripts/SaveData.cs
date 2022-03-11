@@ -6,11 +6,11 @@ using UnityEngine;
 public class SaveData
 {
     public float highDistance;
-    public int schmekels;
+    public ulong schmekels;
     public bool[] unlocks;
     public int[] upgrades;
 
-    public SaveData(float hDistance, int schmekels,int[] upgrades)
+    public SaveData(float hDistance, ulong schmekels,int[] upgrades)
     {
         this.highDistance = hDistance;
         this.schmekels = schmekels;

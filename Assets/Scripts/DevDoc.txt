@@ -7,17 +7,14 @@
 - Shop Music
 - More Battle Music
 - pause Sound effect
+- Save Heat Settings
 
 ##### Goals:
-- Make Share Score Feature
 - Ads to Continue, ads every 5 games
 
 ##### Bug List:
-- you can Jump While you are paused V
-- pressing space while sellected pause button paused V
 - camera goes too high fix ?
-- 0 hp not dieing ?
-
+- Witches dont attack
 
 ##### Ideas 
 - Enemys That Spawn explotion on where player is in 2 seconds
@@ -27,7 +24,6 @@
 
 ##### Shop Ideas
 - Inviciblity Frames On Jump/ After Take Damage
-- Player Melee Pary / multiplyer
 - Pet That Auto Attacks Enemys
 
 ~ Made the map change every 10 heat

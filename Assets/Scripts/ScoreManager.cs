@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     private static ScoreManager _instance;
     public static ScoreManager Instance {get => _instance;}
     public static SaveData __SaveData;
-    public static int Schmekels = 0;
+    public static ulong Schmekels = 0;
     
     public static float __HiDistance = 0;
     public static float GameSpeed { get => 2f + HeatHandler.GetHeatValue(HeatType.GameSpeed)*0.5f; }
@@ -60,7 +60,7 @@ public class ScoreManager : MonoBehaviour
 
     public static void AddSchmekels(int amount)
     {
-        Schmekels += SchmekelCalc(amount);
+        Schmekels += (ulong)SchmekelCalc(amount);
     }
     public static void AddDistance(float amount)
     {
