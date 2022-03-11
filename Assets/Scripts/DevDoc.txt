@@ -6,40 +6,32 @@
 - Shop Sound Effects
 - Shop Music
 - More Battle Music
-- 
-
-
-##### Enemy Upgrades
-- 1 Skelotons move up and down V
-- 2 Skelotons Attack V
-- 3 Big Slime V
-- 4 Witches in Air, Shot multiProjectiles V
-- 5 Add a Flying Boss Unit That Show A Damage Marker and then Summones explotion there after 1 sec V
+- pause Sound effect
 
 ##### Goals:
 - Make Share Score Feature
 - Ads to Continue, ads every 5 games
 
 ##### Bug List:
+- you can Jump While you are paused V
+- pressing space while sellected pause button paused V
+- camera goes too high fix ?
+- 0 hp not dieing ?
 
 
 ##### Ideas 
-- Enemys Move Up And Down
 - Enemys That Spawn explotion on where player is in 2 seconds
-- Spikes/LandMine On Ground
-- Skelotons That Swing At you
-- Player Crouch?
 - Player Attack?
 - Player Shot Projectiles?
-- Traps?
 - Cosmetics that Cost Schmekels?
-- Money Magnet
 
 ##### Shop Ideas
 - Inviciblity Frames On Jump/ After Take Damage
 - Player Melee Pary / multiplyer
 - Pet That Auto Attacks Enemys
 
-~ Scene Transition
-~ Main Menu Click On Coins To Get Shmekels Play the effects also
-~ Show On Death Screen Current Score, Hi Score, HeatBreakdown so it can be shared
+~ Made the map change every 10 heat
+~ Balance Patch
+~ Game Scaling, Shop Scaling, Heat Reward Patch
+~ added Basic Parry
+~ added Level Title

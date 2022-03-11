@@ -11,7 +11,8 @@ public class CoinClick : MonoBehaviour
     }
     IEnumerator Particles()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+        GetComponent<SpriteRenderer>().color = Color.clear;
+        GetComponent<AudioSource>().Play();
         effect.Play();
         yield return new WaitUntil(() => !effect.IsAlive());
         Destroy(gameObject);

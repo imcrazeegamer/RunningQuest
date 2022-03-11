@@ -9,6 +9,8 @@ public class SpikeGenarator : MonoBehaviour
     [SerializeField] GameObject upgradedPrefab;
     [SerializeField] int minheat = 2;
     float timeBtwSpawn;
+    float lastDistanceMulti = 0;
+    [SerializeField] bool useUnitCircle = false;
     [SerializeField] float startTimeBtwSpawn = 2f;
     [SerializeField] [Range(0f, 1f)] float startTimeDelta = 0.001f;
     [SerializeField] [Range(0.001f, 2f)] float startTimeLimit = 0.1f;
@@ -31,11 +33,20 @@ public class SpikeGenarator : MonoBehaviour
     {
         if (ScoreManager.Distance >= distanceToStartSpawn)
         {
+            int dis = (int)(ScoreManager.Distance);
+            if (dis % 10 == 0)
+                if (startTimeBtwSpawn > startTimeLimit && lastDistanceMulti != dis)
+                {
+                    lastDistanceMulti = dis;
+                    startTimeBtwSpawn -= startTimeDelta;
+                    Debug.Log($"SpawnRate Is Now {startTimeBtwSpawn}");
+                }
+                    
+
             if (timeBtwSpawn <= 0)
             {
                 GenarateSpike();
-                if (startTimeBtwSpawn > startTimeLimit)
-                    startTimeBtwSpawn -= startTimeDelta;
+                
                 timeBtwSpawn = startTimeBtwSpawn;
             }
             else
@@ -46,6 +57,11 @@ public class SpikeGenarator : MonoBehaviour
     }
     public void GenarateSpike()
     {
-        Instantiate(spikePrefab, transform.position + new Vector3(Random.value * -1,0,0), Quaternion.identity, transform);
+        Vector3 spawnLocation = transform.position + new Vector3(Random.value * -1, 0, 0);
+        if (useUnitCircle)
+        {
+            spawnLocation += Random.insideUnitSphere;
+        }
+        Instantiate(spikePrefab, spawnLocation, Quaternion.identity, transform);
     }
 }

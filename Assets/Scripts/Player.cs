@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject pauseOverlay;
     [SerializeField] GameObject pauseBtn;
     [SerializeField] Transform Shield;
-    
+    [SerializeField] ParticleSystem parryEffect;
+    public ParticleSystem coinEffect;
     public float jumpVelocity = 20;
     public int maxJumps = 1;
     public float hpRegen = 0;
 
+    bool isParry = false;
     bool isShield = false;
     int currentJumps;
     float health = 1;
@@ -40,10 +42,8 @@ public class Player : MonoBehaviour
 
         }
         HpRegen();
-        if ((Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space)) && currentJumps >= 1)
+        if ((Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space)) && currentJumps >= 1 && Time.timeScale != 0)
         {
-            //isGrounded = false;
-            
             rb.AddForce(Vector2.up * jumpVelocity * jumpMod());
             AudioManager.instance.Play("jump");
             currentJumps--;
@@ -82,6 +82,10 @@ public class Player : MonoBehaviour
             Shield.gameObject.SetActive(false);
             isShield = false;
         }
+        else if (isParry)
+        {
+            parryEffect.Play();
+        }
         else
         {
             amount += amount * 0.1f * HeatHandler.GetHeatValue(HeatType.DamageTaken);
@@ -117,5 +121,13 @@ public class Player : MonoBehaviour
     {
         isShield = true;
         Shield.gameObject.SetActive(isShield);
+    }
+    public void EnableParry()
+    {
+        isParry = true;
+    }
+    public void DisableParry()
+    {
+        isParry = false;
     }
 }

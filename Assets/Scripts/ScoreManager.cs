@@ -12,14 +12,14 @@ public class ScoreManager : MonoBehaviour
     public static int Schmekels = 0;
     
     public static float __HiDistance = 0;
-    public static float GameSpeed { get => 2f + HeatHandler.GetHeatValue(HeatType.GameSpeed)*0.1f; }
+    public static float GameSpeed { get => 2f + HeatHandler.GetHeatValue(HeatType.GameSpeed)*0.5f; }
     public static int[] Upgrades = new[] {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     public static float Distance = 0;
     public static List<int> HeatList = new List<int>() { 0, 0, 0, 0, 0 };
     public static int Heat = 0;
-    public static float GoldMulti { get => 1 + (Heat / 5f); }
-    public static float DistanceMulti { get => 1 + (Heat / 10f); }
+    public static float GoldMulti { get => 1 + (Heat / 10f); }
+    public static float DistanceMulti { get => 1 + (Heat / 20f); }
     public static int GetCurrentHeat { get => HeatList.Sum(x => x); }
     private void Awake()
     {

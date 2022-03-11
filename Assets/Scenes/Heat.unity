@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.8018868, g: 0.5779637, b: 0.5779637, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1549,8 +1549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -200}
-  m_SizeDelta: {x: 300, y: 200}
+  m_AnchoredPosition: {x: 200, y: -175.28}
+  m_SizeDelta: {x: 300, y: 150.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597931076
 MonoBehaviour:
@@ -1700,7 +1700,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3773585, g: 0.10466357, b: 0.12860854, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2201,6 +2201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 173145831}
     m_Modifications:
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: delta
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
       value: GameSpeed
@@ -2541,7 +2545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 47.450012, y: -31.685}
+  m_AnchoredPosition: {x: 47.450012, y: -31.684998}
   m_SizeDelta: {x: 94.9, y: 63.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7329027206248596866

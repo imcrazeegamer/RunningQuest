@@ -13,6 +13,7 @@ public class HeatModGUI : MonoBehaviour
     public int maxLevel = -1;
     public int level = 0;
     public int heatLevel = 0;
+    public int delta = 10;
 
     public void ChangeLevel(int delta)
     {
@@ -38,7 +39,7 @@ public class HeatModGUI : MonoBehaviour
         string ogStr = modValue.text;
         if (ogStr.Contains('%'))
         {
-            modValue.text = $"{ogStr[0]}{heatLevel * 10}%";
+            modValue.text = $"{ogStr[0]}{heatLevel * delta}%";
         }
         else
         {

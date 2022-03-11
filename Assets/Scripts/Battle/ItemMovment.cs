@@ -27,14 +27,14 @@ public class ItemMovment : MonoBehaviour
                     ScoreManager.AddSchmekels(1);
                     AudioManager.instance.Play("coin");
                     DamagePopup.Create(prefabPopup, self.transform.position, ScoreManager.SchmekelCalc(1), true);
-                    collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+                    collision.gameObject.GetComponentInChildren<Player>().coinEffect.Play();
                     Destroy(self);
                     break;
                 case EffectedStat.SchmekelsUltra:
                     ScoreManager.AddSchmekels(10);
                     AudioManager.instance.Play("coin");
                     DamagePopup.Create(prefabPopup, self.transform.position, ScoreManager.SchmekelCalc(10), true);
-                    collision.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+                    collision.gameObject.GetComponentInChildren<Player>().coinEffect.Play();
                     Destroy(self);
                     break;
                 case EffectedStat.Hp:
