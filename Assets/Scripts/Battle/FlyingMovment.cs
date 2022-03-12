@@ -8,7 +8,7 @@ public class FlyingMovment : MonoBehaviour
     public Vector2 moveVector = Vector2.left;
     [SerializeField] GameObject projectile;
     [SerializeField] GameObject popupPrefab;
-    float timeBtwSpawn = 2f;
+    float timeBtwSpawn = 0f;
     [SerializeField] [Range(0.1f, 10f)] float startTimeMin = 1f;
     [SerializeField] [Range(1f, 10f)] float startTimeMax = 10f;
     [SerializeField] bool destroyOnPlayerCollision = false;

@@ -9,7 +9,7 @@ public class GameOverOverlay : MonoBehaviour
     [SerializeField] TextMeshProUGUI DistanceText;
     [SerializeField] List<TextMeshProUGUI> HeatText;
 
-    private void OnEnable()
+    void OnEnable()
     {
         if (ScoreManager.Distance > ScoreManager.__HiDistance)
         {
@@ -24,10 +24,22 @@ public class GameOverOverlay : MonoBehaviour
         AudioManager.instance.Stop("music");
         AudioManager.instance.Play("gameover");
         Time.timeScale = 0f;
+        foreach (BannerAds b in FindObjectsOfType<BannerAds>())
+        {
+            b.LoadBanner();
+        }
+
     }
-   
+    private void Start()
+    {
+        foreach (BannerAds b in FindObjectsOfType<BannerAds>())
+        {
+            b.ShowBannerAd();
+        }
+    }
     public void RestartLevel() 
     {
+        HideBanner();
         ScoreManager.Distance = 0;
         Time.timeScale = 1f;
         LevelLoader.Instance.LoadNextLevel(SceneManager.GetActiveScene().name);
@@ -35,15 +47,26 @@ public class GameOverOverlay : MonoBehaviour
     }
     public void ContinueLevel()
     {
+        HideBanner();
         FindObjectOfType<Player>().Hp = 1f;
         Time.timeScale = 1f;
+        AudioManager.instance.Play("music");
         gameObject.SetActive(false);
+
     }
     public void GoToShop()
     {
+        HideBanner();
         ScoreManager.Distance = 0;
         ScoreManager.SaveScore();
         LevelLoader.Instance.LoadNextLevel("Shop");
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Shop"));
+    }
+    void HideBanner()
+    {
+        foreach (BannerAds b in FindObjectsOfType<BannerAds>())
+        {
+            b.HideBannerAd();
+        }
     }
 }

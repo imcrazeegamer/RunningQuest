@@ -69,5 +69,11 @@ public class ScoreManager : MonoBehaviour
     public static int SchmekelCalc(int amount) { return (int)(amount * GoldMulti); }
     public static float DistanceCalc(float amount) { return amount * DistanceMulti; }
 
+    public static void SchmekelsReward()
+    {
+        Schmekels = (ulong)(1.01f * Schmekels);
+        AudioManager.instance.Play("coin");
+        FindObjectOfType<StatPanel>().UpdateSchmekels(Schmekels);
+    }
 
 }

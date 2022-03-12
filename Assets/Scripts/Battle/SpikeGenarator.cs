@@ -39,7 +39,7 @@ public class SpikeGenarator : MonoBehaviour
                 {
                     lastDistanceMulti = dis;
                     startTimeBtwSpawn -= startTimeDelta;
-                    Debug.Log($"SpawnRate Is Now {startTimeBtwSpawn}");
+                    //Debug.Log($"SpawnRate Is Now {startTimeBtwSpawn}");
                 }
                     
 

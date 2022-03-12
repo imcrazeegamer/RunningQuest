@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb9a70aefc8c914782a9936b0dcc0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0.3
+  damageAmount: 0.2
 --- !u!1001 &8107947494704721382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 4125354644676587612, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
       propertyPath: m_Name
       value: Skeleton Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125354644676587613, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
+      propertyPath: damage
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4125354644676587614, guid: 9de65c56c4b149c40b4c25b43bbde218, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

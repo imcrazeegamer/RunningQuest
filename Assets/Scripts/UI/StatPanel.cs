@@ -16,4 +16,8 @@ public class StatPanel : MonoBehaviour
         HiScoreText.text = $"HiScore: {System.Math.Round(ScoreManager.__HiDistance, 2)}m";
         HeatText.text = $"Heat: {ScoreManager.Heat}";
     }
+    public void UpdateSchmekels(ulong amount)
+    {
+        SchmekelsText.text = $"Schmekels: {amount}";
+    }
 }

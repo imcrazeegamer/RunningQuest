@@ -7,14 +7,14 @@
 - Shop Music
 - More Battle Music
 - pause Sound effect
+
 - Save Heat Settings
 
 ##### Goals:
-- Ads to Continue, ads every 5 games
+- balance the game
+- add all the music
 
 ##### Bug List:
-- camera goes too high fix ?
-- Witches dont attack
 
 ##### Ideas 
 - Enemys That Spawn explotion on where player is in 2 seconds
@@ -26,8 +26,3 @@
 - Inviciblity Frames On Jump/ After Take Damage
 - Pet That Auto Attacks Enemys
 
-~ Made the map change every 10 heat
-~ Balance Patch
-~ Game Scaling, Shop Scaling, Heat Reward Patch
-~ added Basic Parry
-~ added Level Title

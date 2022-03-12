@@ -90,6 +90,10 @@ public class Player : MonoBehaviour
         {
             amount += amount * 0.1f * HeatHandler.GetHeatValue(HeatType.DamageTaken);
             health -= amount;
+            if(health < 0.001f)
+            {
+                health = 0f;
+            }
             DamagePopup.Create(damagePopupPrefab, transform.position,(int)(amount * 100));
             Animator a;
             if (TryGetComponent(out a))
@@ -98,7 +102,7 @@ public class Player : MonoBehaviour
             }
             AudioManager.instance.Play("damage");
         }
-        //Debug.Log($"Player HP: {health}");
+        Debug.Log($"Player HP: {health}");
     }
     public void Heal(float amount)
     {
