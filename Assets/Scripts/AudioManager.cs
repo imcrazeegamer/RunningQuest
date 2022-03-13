@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
+            s.source.volume = s.volume * Settings.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.isLoop;
         }
@@ -98,7 +98,6 @@ public class AudioManager : MonoBehaviour
     {
         return Array.Find(sounds, sound => sound.name == name);
     }
-    
     public void ToggleMusic(bool value)
     {
         Find("musicBattle").enabled = value;
@@ -110,6 +109,14 @@ public class AudioManager : MonoBehaviour
         foreach(Sound s in Array.FindAll(sounds, sound => sound.name != "musicBattle" && sound.name != "musicShop" && sound.name != "musicMainMenu"))
         {
             s.enabled = value;
+        }
+    }
+
+    public void UpdateMasterVolume()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.volume * Settings.volume;
         }
     }
 }

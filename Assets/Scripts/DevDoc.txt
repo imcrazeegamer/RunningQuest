@@ -3,12 +3,13 @@
 
 ##### Do It Now:
 
-
 - Heat Music
 - More Battle Music
 - Save Heat Settings
 - Save Settings Settings
 - Show and Save Death Count
+
+
 
 ##### Goals:
 - balance the game

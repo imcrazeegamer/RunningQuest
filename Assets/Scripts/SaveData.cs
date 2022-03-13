@@ -7,14 +7,14 @@ public class SaveData
 {
     public float highDistance;
     public ulong schmekels;
-    public bool[] unlocks;
+    public bool[] settings;
     public int[] upgrades;
 
     public SaveData(float hDistance, ulong schmekels,int[] upgrades)
     {
         this.highDistance = hDistance;
         this.schmekels = schmekels;
-        unlocks = new bool[] { false, false, false };
+        this.settings = new bool[] { false, false, false };
         if (upgrades == null || upgrades.Length == 0)
             upgrades = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
         this.upgrades = upgrades;
@@ -23,7 +23,7 @@ public class SaveData
     {
         this.highDistance = 0;
         this.schmekels = 0;
-        unlocks = new bool[] { false, false, false };
+        settings = new bool[] { false, false, false };
         upgrades = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
     }
 }
