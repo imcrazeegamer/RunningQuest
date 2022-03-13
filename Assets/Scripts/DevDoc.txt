@@ -26,6 +26,3 @@
 - Inviciblity Frames On Jump/ After Take Damage
 - Pet That Auto Attacks Enemys
 
-~ added Sound Effects
-~ added Shop Music
-~ Fixed Jump and roll Animation
