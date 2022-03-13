@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
@@ -10,15 +9,18 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             instance.ToggleMusic(Settings.isMusic);
             instance.ToggleSFX(Settings.isSFX);
             Destroy(gameObject);
             return;
         }
+        else
+        {
+            instance = this;
+        }
 
-        instance = this;
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -29,15 +31,20 @@ public class AudioManager : MonoBehaviour
         }
         ToggleMusic(Settings.isMusic);
         ToggleSFX(Settings.isSFX);
-        Play("music");
+        
         DontDestroyOnLoad(gameObject);
     }
-    
-    
-    public void Play(string name)
+
+
+    public void Play(string name, bool play = true)
     {
+        if (!play)
+        {
+            Stop(name);
+            return;
+        }
         Sound s = Find(name);
-        if(s.enabled == false)
+        if(s == null || s.enabled == false)
         {
             return;
         }
@@ -52,6 +59,11 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.Stop();
+    }
+    public void StopAll()
+    {
+        foreach (Sound s in sounds)
+            s.source.Stop();
     }
     public void Pause(string name)
     {
@@ -89,11 +101,13 @@ public class AudioManager : MonoBehaviour
     
     public void ToggleMusic(bool value)
     {
-        Find("music").enabled = value;
+        Find("musicBattle").enabled = value;
+        Find("musicShop").enabled = value;
+        Find("musicMainMenu").enabled = value;
     }
     public void ToggleSFX(bool value)
     {
-        foreach(Sound s in Array.FindAll(sounds, sound => sound.name != "music"))
+        foreach(Sound s in Array.FindAll(sounds, sound => sound.name != "musicBattle" && sound.name != "musicShop" && sound.name != "musicMainMenu"))
         {
             s.enabled = value;
         }

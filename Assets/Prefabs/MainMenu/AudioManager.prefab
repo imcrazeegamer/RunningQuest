@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7732566376463376550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7732566376463376544}
+  - component: {fileID: 7732566376463376545}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7732566376463376544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732566376463376550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41462865, y: 1.9469109, z: -0.073629566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7732566376463376545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732566376463376550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80a91cc53cea7f4f80081ba0415e7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: damage
+    clip: {fileID: 8300000, guid: ef0c0d52cef2b2e4485d52bba2d5409f, type: 3}
+    volume: 0.3
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: coin
+    clip: {fileID: 8300000, guid: 3a27570f2ff011b44869ce84f754ef38, type: 3}
+    volume: 0.5
+    pitch: 2.1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: parry
+    clip: {fileID: 8300000, guid: b2919fe02201f144c9077b7a6348bab3, type: 3}
+    volume: 0.35
+    pitch: 1.1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: food
+    clip: {fileID: 8300000, guid: 32543ee338316b444a4c9258564c9e4f, type: 3}
+    volume: 0.1
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: gameover
+    clip: {fileID: 8300000, guid: f77f26239f149f24f8d1455ad8e08a24, type: 3}
+    volume: 0.15
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: jump
+    clip: {fileID: 8300000, guid: 0afa041a983e60448b3ae0335ce1bb7e, type: 3}
+    volume: 0.15
+    pitch: 0.4
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: musicBattle
+    clip: {fileID: 8300000, guid: 7adb7b3eef275294a8b2536dc996d2d6, type: 3}
+    volume: 0.1
+    pitch: 1
+    isLoop: 1
+    source: {fileID: 0}
+    enabled: 1
+  - name: musicMainMenu
+    clip: {fileID: 8300000, guid: d4a293160df3820429eac4f52f364885, type: 3}
+    volume: 0.1
+    pitch: 1
+    isLoop: 1
+    source: {fileID: 0}
+    enabled: 1
+  - name: musicShop
+    clip: {fileID: 8300000, guid: 1c765d6141a003d4cb6d4a6a4f8bb3bc, type: 3}
+    volume: 0.1
+    pitch: 1
+    isLoop: 1
+    source: {fileID: 0}
+    enabled: 1
+  - name: pauseStart
+    clip: {fileID: 8300000, guid: 17ba5107ed7597a4d902c75b90c1acf5, type: 3}
+    volume: 0.2
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: pauseEnd
+    clip: {fileID: 8300000, guid: db4c334edfb46024e9dabbcab5187739, type: 3}
+    volume: 0.2
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: shieldApply
+    clip: {fileID: 8300000, guid: 5470d4150e2d1064db171684f865bc28, type: 3}
+    volume: 0.1
+    pitch: 1.5
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: shieldBreak
+    clip: {fileID: 8300000, guid: 61479ba1b75ddb849aa392ee6f5536b7, type: 3}
+    volume: 0.15
+    pitch: 1
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1
+  - name: shopBuy
+    clip: {fileID: 8300000, guid: ea5f4b8dc311a7b47b828a8ca2a77f0a, type: 3}
+    volume: 0.05
+    pitch: 1.5
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1

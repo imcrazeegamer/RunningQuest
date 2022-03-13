@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem 
 {
-    static string path = Application.persistentDataPath + "/data.rat";
+    static string path = Application.persistentDataPath + "/ndata.rat";
     static BinaryFormatter formatter = new BinaryFormatter();
     public static void SaveGame(SaveData data)
     {

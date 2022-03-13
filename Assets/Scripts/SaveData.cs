@@ -24,6 +24,6 @@ public class SaveData
         this.highDistance = 0;
         this.schmekels = 0;
         unlocks = new bool[] { false, false, false };
-        upgrades = new int[] { 0, 0, 0 };
+        upgrades = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
     }
 }

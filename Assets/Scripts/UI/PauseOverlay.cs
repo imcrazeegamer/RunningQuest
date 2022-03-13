@@ -8,7 +8,8 @@ public class PauseOverlay : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 0f;
-        AudioManager.instance.Pause("music");
+        AudioManager.instance.Pause("musicBattle");
+        AudioManager.instance.Play("pauseStart");
     }
     private void Update()
     {
@@ -27,7 +28,8 @@ public class PauseOverlay : MonoBehaviour
     {
         Time.timeScale = 1f;
         gameObject.SetActive(false);
-        AudioManager.instance.Resume("music");
+        AudioManager.instance.Play("pauseEnd");
+        AudioManager.instance.Resume("musicBattle");
     }
     public void GoToShop()
     {
@@ -41,8 +43,8 @@ public class PauseOverlay : MonoBehaviour
     }
     void ChangeScene()
     {
-        AudioManager.instance.Resume("music");
-        AudioManager.instance.Stop("music");
+        AudioManager.instance.Resume("musicBattle");
+        AudioManager.instance.Stop("musicBattle");
         Save();
     }
 }

@@ -39,6 +39,7 @@ public class ShopUI : MonoBehaviour
             upgrade.Level++;
             UpdateUpgradeGUI(upgrade, shopUpgrade);
             PlayerShmekels.text = ScoreManager.Schmekels.ToString();
+            AudioManager.instance.Play("shopBuy");
             //update Score Manager With the upgrades And Save them in saveData;
         }
         

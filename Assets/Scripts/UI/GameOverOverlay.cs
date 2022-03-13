@@ -21,7 +21,7 @@ public class GameOverOverlay : MonoBehaviour
         {
             HeatText[i].text = ScoreManager.HeatList[i].ToString();
         }
-        AudioManager.instance.Stop("music");
+        AudioManager.instance.Stop("musicBattle");
         AudioManager.instance.Play("gameover");
         Time.timeScale = 0f;
         foreach (BannerAds b in FindObjectsOfType<BannerAds>())
@@ -50,7 +50,7 @@ public class GameOverOverlay : MonoBehaviour
         HideBanner();
         FindObjectOfType<Player>().Hp = 1f;
         Time.timeScale = 1f;
-        AudioManager.instance.Play("music");
+        AudioManager.instance.Play("musicBattle");
         gameObject.SetActive(false);
 
     }

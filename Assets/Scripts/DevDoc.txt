@@ -2,13 +2,13 @@
 ###Dev Doc
 
 ##### Do It Now:
-- Sheild Equip sound effect
-- Shop Sound Effects
-- Shop Music
-- More Battle Music
-- pause Sound effect
 
+
+- Heat Music
+- More Battle Music
 - Save Heat Settings
+- Save Settings Settings
+- Show and Save Death Count
 
 ##### Goals:
 - balance the game
@@ -26,3 +26,6 @@
 - Inviciblity Frames On Jump/ After Take Damage
 - Pet That Auto Attacks Enemys
 
+~ added Sound Effects
+~ added Shop Music
+~ Fixed Jump and roll Animation

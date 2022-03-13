@@ -29,25 +29,24 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         currentJumps = maxJumps;
     }
-    private void Start()
-    {
-        AudioManager.instance.Play("music");
-    }
+    
     void Update()
     {
         if (health <= 0)
         {
             pauseBtn.SetActive(false);
             gameOverOverlay.SetActive(true);
-
         }
         HpRegen();
+        
         if ((Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space)) && currentJumps >= 1 && Time.timeScale != 0)
         {
             rb.AddForce(Vector2.up * jumpVelocity * jumpMod());
             AudioManager.instance.Play("jump");
+            animator.SetTrigger("Roll");
             currentJumps--;
         }
+        
         ScoreManager.AddDistance(Time.deltaTime);
         animator.SetBool("IsJumping", currentJumps != maxJumps);
        if (Input.GetKeyDown(KeyCode.Escape))
@@ -81,10 +80,12 @@ public class Player : MonoBehaviour
         {
             Shield.gameObject.SetActive(false);
             isShield = false;
+            AudioManager.instance.Play("shieldBreak");
         }
         else if (isParry)
         {
             parryEffect.Play();
+            AudioManager.instance.Play("parry");
         }
         else
         {
@@ -102,7 +103,7 @@ public class Player : MonoBehaviour
             }
             AudioManager.instance.Play("damage");
         }
-        Debug.Log($"Player HP: {health}");
+        //Debug.Log($"Player HP: {health}");
     }
     public void Heal(float amount)
     {
@@ -124,6 +125,7 @@ public class Player : MonoBehaviour
     public void TurnOnSheild()
     {
         isShield = true;
+        AudioManager.instance.Play("shieldApply");
         Shield.gameObject.SetActive(isShield);
     }
     public void EnableParry()

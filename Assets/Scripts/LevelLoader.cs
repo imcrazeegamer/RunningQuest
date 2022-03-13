@@ -14,6 +14,11 @@ public class LevelLoader : MonoBehaviour
         _instance = this;
         animator = GetComponentInChildren<Animator>();
     }
+    private void Start()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        AudioManager.instance.Play($"music{sceneName}");
+    }
     public void LoadNextLevel(string name)
     {
         Time.timeScale = 1f;
@@ -23,6 +28,7 @@ public class LevelLoader : MonoBehaviour
     {
         animator.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
+        AudioManager.instance.StopAll();
         SceneManager.LoadScene(name);
     }
 }
