@@ -305,7 +305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.8586152}
-  m_AnchoredPosition: {x: 0.0025024414, y: 0}
+  m_AnchoredPosition: {x: 0.0024414062, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129981033
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -843,6 +843,10 @@ PrefabInstance:
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4838091409136993329, guid: cb9363ad13cec884e8e0b9b3d64eafbf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.12109375
+      objectReference: {fileID: 0}
     - target: {fileID: 4838091409136993330, guid: cb9363ad13cec884e8e0b9b3d64eafbf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -882,6 +886,10 @@ PrefabInstance:
     - target: {fileID: 4838091409136993331, guid: cb9363ad13cec884e8e0b9b3d64eafbf, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838091409241131850, guid: cb9363ad13cec884e8e0b9b3d64eafbf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -63.82007
       objectReference: {fileID: 0}
     - target: {fileID: 4838091409294805586, guid: cb9363ad13cec884e8e0b9b3d64eafbf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

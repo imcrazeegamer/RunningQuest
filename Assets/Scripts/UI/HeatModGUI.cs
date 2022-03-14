@@ -28,7 +28,9 @@ public class HeatModGUI : MonoBehaviour
         else
         {
             level += delta;
+            AudioManager.instance.Play("btnUI");
         }
+        
         heatLevel = level * Convert.ToInt32(heatPer.text);
         updateModValue();
 
@@ -50,6 +52,6 @@ public class HeatModGUI : MonoBehaviour
     public void UpdateObj(int level)
     {
         this.level = level;
-        ChangeLevel(0);
+        updateModValue();
     }
 }

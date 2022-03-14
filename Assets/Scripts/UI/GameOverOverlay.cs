@@ -58,6 +58,7 @@ public class GameOverOverlay : MonoBehaviour
     {
         HideBanner();
         ScoreManager.Distance = 0;
+        Time.timeScale = 1f;
         ScoreManager.SaveScore();
         LevelLoader.Instance.LoadNextLevel("Shop");
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Shop"));

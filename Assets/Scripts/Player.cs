@@ -76,16 +76,16 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float amount)
     {
-        if (isShield)
+        if (isParry)
+        {
+            parryEffect.Play();
+            AudioManager.instance.Play("parry");
+        }
+        else if (isShield)
         {
             Shield.gameObject.SetActive(false);
             isShield = false;
             AudioManager.instance.Play("shieldBreak");
-        }
-        else if (isParry)
-        {
-            parryEffect.Play();
-            AudioManager.instance.Play("parry");
         }
         else
         {

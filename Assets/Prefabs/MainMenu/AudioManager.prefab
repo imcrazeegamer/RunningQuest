@@ -143,3 +143,10 @@ MonoBehaviour:
     isLoop: 0
     source: {fileID: 0}
     enabled: 1
+  - name: btnUI
+    clip: {fileID: 8300000, guid: ea5f4b8dc311a7b47b828a8ca2a77f0a, type: 3}
+    volume: 0.05
+    pitch: 1.9
+    isLoop: 0
+    source: {fileID: 0}
+    enabled: 1

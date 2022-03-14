@@ -2,20 +2,24 @@
 ###Dev Doc
 
 ##### Do It Now:
-
 - Heat Music
 - More Battle Music
-- Save Heat Settings
-- Save Settings Settings
-- Show and Save Death Count
-
-
 
 ##### Goals:
 - balance the game
 - add all the music
 
 ##### Bug List:
+- buttons freze when time scale is 0;
+
+
+##### Bug List Mobile:
+- Aspect Ratio On Mobile is 2340X1080, blue margins
+- Game Is Laggy And Not Responsive, Jittery And Low Fps
+- Transition isnt Fully Black only in build
+- Scalling in All UIs(Shop, Settings, Heat, Hud)
+
+
 
 ##### Ideas 
 - Enemys That Spawn explotion on where player is in 2 seconds
@@ -24,6 +28,5 @@
 - Cosmetics that Cost Schmekels?
 
 ##### Shop Ideas
-- Inviciblity Frames On Jump/ After Take Damage
 - Pet That Auto Attacks Enemys
 

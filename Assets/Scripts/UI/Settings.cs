@@ -38,6 +38,7 @@ public class Settings : MonoBehaviour
         else
         {
             volume += delta;
+            AudioManager.instance.Play("btnUI");
         }
         UpdateText();
     }

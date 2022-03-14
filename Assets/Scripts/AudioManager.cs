@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume * Settings.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.isLoop;
+            s.source.playOnAwake = false;
         }
         ToggleMusic(Settings.isMusic);
         ToggleSFX(Settings.isSFX);

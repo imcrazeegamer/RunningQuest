@@ -7,7 +7,6 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
-    [SerializeField] AdType adType;
     string _adUnitId = null; // This will remain null for unsupported platforms
 
     void Awake()
@@ -27,14 +26,14 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     public void LoadAd()
     {
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
-        Debug.Log("Loading Ad: " + _adUnitId);
+        //Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
 
     // If the ad successfully loads, add a listener to the button and enable it:
     public void OnUnityAdsAdLoaded(string adUnitId)
     {
-        Debug.Log("Ad Loaded: " + adUnitId);
+        //Debug.Log("Ad Loaded: " + adUnitId);
 
         if (adUnitId.Equals(_adUnitId))
         {
@@ -59,14 +58,26 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     {
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
-            Debug.Log("Unity Ads Rewarded Ad Completed");
-            if (adType == AdType.Continue)
+            if (this == null)
+            {
+                return;
+            }
+            if (gameObject.name == "Continue") 
+            {
+                Debug.Log("Unity Ads Rewarded Ad Continue");
                 FindObjectOfType<GameOverOverlay>().ContinueLevel();
-            else if (adType == AdType.Schmeckles)
+            }
+            else
+            {
+                Debug.Log("Unity Ads Rewarded Ad Schmeckles");
                 ScoreManager.SchmekelsReward();
-
+            }
+            Destroy(gameObject);
+            Destroy(this);
+           
             // Load another ad:
-            Advertisement.Load(_adUnitId, this);
+            //Advertisement.Load(_adUnitId, this);
+
         }
     }
 
@@ -75,6 +86,7 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     {
         Debug.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}");
         // Use the error details to determine whether to try to load another ad.
+        Destroy(gameObject);
     }
 
     public void OnUnityAdsShowFailure(string adUnitId, UnityAdsShowError error, string message)
