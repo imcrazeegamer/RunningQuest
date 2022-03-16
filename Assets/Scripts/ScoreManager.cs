@@ -36,6 +36,7 @@ public class ScoreManager : MonoBehaviour
         FindObjectOfType<UpgradeHandler>().LoadUpgrades();
         FindObjectOfType<BackgroundHandler>().SwitchBackground(Heat);
         DontDestroyOnLoad(gameObject);
+        //Schmekels = ulong.MaxValue - 1000000;
     }
     public static int[] UpgradesToIntArray(Upgrade[] upgrades)
     {

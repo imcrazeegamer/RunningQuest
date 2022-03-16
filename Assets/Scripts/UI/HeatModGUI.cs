@@ -12,7 +12,6 @@ public class HeatModGUI : MonoBehaviour
     public TextMeshProUGUI heatPer;
     public int maxLevel = -1;
     public int level = 0;
-    public int heatLevel = 0;
     public int delta = 10;
 
     public void ChangeLevel(int delta)
@@ -30,8 +29,6 @@ public class HeatModGUI : MonoBehaviour
             level += delta;
             AudioManager.instance.Play("btnUI");
         }
-        
-        heatLevel = level * Convert.ToInt32(heatPer.text);
         updateModValue();
 
     }
@@ -41,7 +38,7 @@ public class HeatModGUI : MonoBehaviour
         string ogStr = modValue.text;
         if (ogStr.Contains('%'))
         {
-            modValue.text = $"{ogStr[0]}{heatLevel * delta}%";
+            modValue.text = $"{ogStr[0]}{level * delta}%";
         }
         else
         {

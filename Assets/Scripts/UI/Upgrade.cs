@@ -10,7 +10,7 @@ public class Upgrade
     public int initalCost;
     [Range(1f, 2f)] public float costMultiplyer;
     public int Level = 0;
-    [HideInInspector] public int Cost { get => (int)(initalCost + Mathf.Pow(costMultiplyer, Level+8)); }
+    [HideInInspector] public ulong Cost { get => GetCost(); } 
     [HideInInspector] public GameObject instance;
     public int moneySpent()
     {
@@ -21,6 +21,16 @@ public class Upgrade
         }
         return sum;
             
+    }
+    public ulong GetCost()
+    {
+        ulong max = 100000000;
+        ulong cost =(ulong)(initalCost + Mathf.Pow(costMultiplyer, Level + 8));
+        if(cost > max)
+        {
+            cost = max;
+        }
+        return cost;
     }
 }
 public enum UpgradeType

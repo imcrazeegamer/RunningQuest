@@ -17,30 +17,32 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
 #elif UNITY_ANDROID
         _adUnitId = _androidAdUnitId;
 #endif
-
+        _showAdButton.gameObject.GetComponent<Image>().enabled = false;
+        LoadAd();
         //Disable the button until the ad is ready to show:
-        _showAdButton.interactable = false;
+        //_showAdButton.interactable = false;
     }
 
     // Load content to the Ad Unit:
     public void LoadAd()
     {
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
-        //Debug.Log("Loading Ad: " + _adUnitId);
+        Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
 
     // If the ad successfully loads, add a listener to the button and enable it:
     public void OnUnityAdsAdLoaded(string adUnitId)
     {
-        //Debug.Log("Ad Loaded: " + adUnitId);
+        Debug.Log("Ad Loaded: " + adUnitId);
 
         if (adUnitId.Equals(_adUnitId))
         {
             // Configure the button to call the ShowAd() method when clicked:
+            _showAdButton.gameObject.GetComponent<Image>().enabled = true;
             _showAdButton.onClick.AddListener(ShowAd);
             // Enable the button for users to click:
-            _showAdButton.interactable = true;
+            //_showAdButton.interactable = true;
         }
     }
 
@@ -48,7 +50,7 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     public void ShowAd()
     {
         // Disable the button:
-        _showAdButton.interactable = false;
+        //_showAdButton.interactable =;
         // Then show the ad:
         Advertisement.Show(_adUnitId, this);
     }
@@ -76,7 +78,7 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
             Destroy(this);
            
             // Load another ad:
-            //Advertisement.Load(_adUnitId, this);
+            Advertisement.Load(_adUnitId, this);
 
         }
     }

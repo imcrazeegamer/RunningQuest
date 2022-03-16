@@ -641,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold Multiplyer: 1'
+  m_text: 'Gold Multiplier: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1551468d9a79126458da660dd8c47ea9, type: 2}
   m_sharedMaterial: {fileID: -5905195006825216464, guid: 1551468d9a79126458da660dd8c47ea9, type: 2}
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance Multiplyer: 1'
+  m_text: 'Distance Multiplier: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1551468d9a79126458da660dd8c47ea9, type: 2}
   m_sharedMaterial: {fileID: -5905195006825216464, guid: 1551468d9a79126458da660dd8c47ea9, type: 2}
@@ -1478,9 +1478,21 @@ PrefabInstance:
       propertyPath: delta
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: maxLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424290716661546994, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290716883251057, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_text
       value: Damage Taken
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424290717129031650, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
@@ -2290,6 +2302,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 173145831}
     m_Modifications:
+    - target: {fileID: 3458349867610673102, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: maxLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424290716661546994, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424290717129031650, guid: 55332d498059ea14399db4c51b980b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6424290717862460962, guid: 55332d498059ea14399db4c51b980b28, type: 3}
       propertyPath: m_Name
       value: GameSpeed

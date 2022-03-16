@@ -21,7 +21,9 @@ public class AttackPlayer : MonoBehaviour
         int heatValue = HeatHandler.GetHeatValue(HeatType.StrogerFoes);
         canAttack = heatValue > 2;
         attackWait = heatValue > 4 ? attackWait * (1 / heatValue) : attackWait;
-        attackSpeed = heatValue > 4 ? attackWait * (1 / heatValue) : attackWait;
+        attackSpeed = heatValue > 4 ? attackSpeed * heatValue : attackSpeed;
+        attackWait /= ScoreManager.GameSpeed;
+        attackSpeed *= ScoreManager.GameSpeed;
         animator.SetFloat("AttackSpeed", attackSpeed);
         animator.SetFloat("AttackWait", attackWait);
 
